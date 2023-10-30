@@ -31,4 +31,11 @@ public class BillService {
     public List<Bill> findAll() {
         return billRepository.findAll();
     }
+
+    public boolean delete(long id) {
+        return findById(id).map(bill -> {
+            billRepository.delete(id);
+            return true;
+        }).orElse(false);
+    }
 }

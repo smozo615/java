@@ -13,4 +13,6 @@ public interface IBillRepository {
     Optional<List<Bill>> findByUserId(Long userId);
 
     List<Bill> findAll();
+
+    void delete(long id);
 }

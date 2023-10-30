@@ -49,4 +49,8 @@ public class BillRepository implements IBillRepository {
         return mapper.toBills(billEntities);
     }
 
+    @Override
+    public void delete(long id) {
+        billCrud.deleteById(id);
+    }
 }
