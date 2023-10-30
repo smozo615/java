@@ -3,14 +3,20 @@ package com.taxi.taxi.persistence.repositories;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
 import com.taxi.taxi.domain.interfaces.IUserRepository;
 import com.taxi.taxi.domain.models.User;
 import com.taxi.taxi.persistence.crud.UserCrud;
 import com.taxi.taxi.persistence.entities.UserEntity;
 import com.taxi.taxi.persistence.mappers.UserMapper;
 
+@Repository
 public class UserRepository implements IUserRepository {
     private final UserCrud userCrud;
+
+    @Autowired
     private UserMapper mapper;
 
     public UserRepository(UserCrud userCrud) {
