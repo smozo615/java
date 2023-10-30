@@ -1,5 +1,7 @@
 package com.taxi.taxi.domain.models;
 
+import java.util.List;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,4 +12,5 @@ public class User {
     private String name;
     private int age;
     private String email;
+    private List<Bill> bills;
 }
