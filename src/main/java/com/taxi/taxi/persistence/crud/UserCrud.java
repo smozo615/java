@@ -4,5 +4,5 @@ import org.springframework.data.repository.CrudRepository;
 
 import com.taxi.taxi.persistence.entities.UserEntity;
 
-interface UserCrud extends CrudRepository<UserEntity, Long> {
+public interface UserCrud extends CrudRepository<UserEntity, Long> {
 }
